@@ -22,11 +22,10 @@ curl -L $POPPLER_TARBALL_URL | tar xJ
 
 (
 	cd poppler-${POPPLER_VERSION}
-	./configure \
-	  --prefix=/tmp/poppler \
-	  --disable-shared \
-	  --enable-build-type=release \
-	  --enable-libopenjpeg=none
+	mkdir build
+	cd build
+	cmake .. -DCMAKE_INSTALL_PREFIX=/tmp/poppler -DCMAKE_BUILD_TYPE=release -DENABLE_BOOST=OFF -DENABLE_LIBOPENJPEG=none
+	make
 	make install
 )
 
