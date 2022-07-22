@@ -24,7 +24,7 @@ curl -L $POPPLER_TARBALL_URL | tar xJ
 	cd poppler-${POPPLER_VERSION}
 	mkdir build
 	cd build
-	cmake .. -DCMAKE_INSTALL_PREFIX=/tmp/poppler -DCMAKE_BUILD_TYPE=release -DENABLE_BOOST=OFF -DENABLE_LIBOPENJPEG=none
+	cmake .. -DCMAKE_INSTALL_PREFIX=/tmp/poppler -DCMAKE_BUILD_TYPE=release -DENABLE_BOOST=OFF -DENABLE_LIBOPENJPEG=none -DBUILD_SHARED_LIBS=OFF
 	make
 	make install
 )
