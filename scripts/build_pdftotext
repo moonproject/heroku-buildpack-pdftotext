@@ -1,6 +1,6 @@
 #!/bin/bash
 
-POPPLER_VERSION=${POPPLER_VERSION-0.57.0}
+POPPLER_VERSION=${POPPLER_VERSION-22.07.0}
 POPPLER_TARBALL_URL="https://poppler.freedesktop.org/poppler-${POPPLER_VERSION}.tar.xz"
 TEMP_DIR=$(mktemp -d /tmp/poppler.XXXXXXXXXX)
 
